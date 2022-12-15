@@ -91,3 +91,5 @@ pip-selfcheck.json
 .idea/modules.xml
 .idea/misc.xml
 .idea/inspectionProfiles/profiles_settings.xml
+.idea/.gitignore
+*.pyc
