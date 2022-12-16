@@ -3,6 +3,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 from login_func import login
 
+
 class TestConstructor:
     def test_open_constructor_page_by_constructor_button_from_profile(self, driver, test_email, valid_password):
         driver.get('https://stellarburgers.nomoreparties.site/login')

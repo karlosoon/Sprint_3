@@ -2,65 +2,54 @@ from selenium.webdriver.common.by import By
 
 
 class TestLocators:
-    PROFILE_BUTTON = By.XPATH, '//*[@id="root"]/div/header/nav/a' # кнопка Личный Кабинет
-
-    IN_PROFILE_NEW_USER_REGISTRATION_BUTTON = \
-        By.XPATH, '//*[@id="root"]/div/main/div/div/p[1]/a' # кнопка Зарегистрироваться в личном кабинете
+    PROFILE_BUTTON = By.XPATH, './/p[text()="Личный Кабинет"]'  # кнопка Личный Кабинет
 
     NEW_USER_REGISTRATION_BUTTON = \
-        By.XPATH, '//*[@id="root"]/div/main/div/form/button' # кнопка Зарегистрироваться в окне регистрации
+        By.XPATH, './/button[text()="Зарегистрироваться"]'  # кнопка Зарегистрироваться в окне регистрации
 
-    USERNAME_FIELD_IN_REGISTRATION_FORM = \
-        By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div/input[@name="name"]' # поле ввода имени в окне регистрации
+    USERNAME_FIELD_IN_REGISTRATION_FORM = By.XPATH, './/input[@name="name"]'  # поле ввода имени в окне регистрации
 
-    EMAIL_FIELD_IN_REGISTRATION_FORM = \
-        By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div/input' # поле ввода емейл в окне регистрации
+    EMAIL_FIELD_IN_REGISTRATION_FORM = By.XPATH, './/fieldset[2]//input'  # поле ввода емейл в окне регистрации
 
-    PASSWORD_FIELD_IN_REGISTRATION_FORM = \
-        By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[3]/div/div/input' # поле ввода пароля в окне регистрации
+    PASSWORD_FIELD_IN_REGISTRATION_FORM = By.XPATH, './/input[@name="Пароль"]'  # поле ввода пароля в окне регистрации
 
-    EMAIL_FIELD_IN_LOGIN_FORM = \
-        By.CSS_SELECTOR, '#root > div > main > div > form > fieldset:nth-child(1) > div > div > input' # поле ввода емейл в окне логина
+    EMAIL_FIELD_IN_LOGIN_FORM = By.XPATH, './/input[@name="name"]'  # поле ввода емейл в окне логина
 
-    PASSWORD_FIELD_IN_LOGIN_FORM = \
-        By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div/input' # поле ввода пароля в окне логина
+    PASSWORD_FIELD_IN_LOGIN_FORM = By.XPATH, './/input[@name="Пароль"]'  # поле ввода пароля в окне логина
 
-    SIGN_IN_BUTTON_IN_LOGIN_FORM = \
-        By.XPATH, '//*[@id="root"]/div/main/div/form/button[text()="Войти"]' # кнопка Войти в окне логина
-
-    EMAIL_FIELD_IN_PROFILE = \
-        By.XPATH, '//*[@id="root"]/div/main/div/div/div/ul/li[2]/div/div/input' # поле с емейл в личном кабинете
+    SIGN_IN_BUTTON_IN_LOGIN_FORM = By.XPATH, './/button[text()="Войти"]'  # кнопка Войти в окне логина
 
     INVALID_PASSWORD_TEXT_IN_REGISTRATION_FORM = \
-        By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[3]/div/p' # надпись Некорректный пароль в окне регистрации
+        By.XPATH, './/p[@class="input__error text_type_main-default"]'  # надпись Некорректный пароль в окне регистрации
 
-    SIGN_IN_BUTTON_ON_MAIN_PAGE = By.XPATH, '//*[@id="root"]/div/main/section[2]/div/button' # кнопка логина на главной
+    SIGN_IN_BUTTON_ON_MAIN_PAGE = By.XPATH, './/button[text()="Войти в аккаунт"]'  # кнопка логина на главной
 
     MAKE_ORDER_BUTTON_ON_MAIN_PAGE = \
-        By.XPATH, '//*[@id="root"]/div/main/section[2]/div/button[text()="Оформить заказ"]' # кнопка оформить заказ на главной
+        By.XPATH, './/button[text()="Оформить заказ"]'  # кнопка оформить заказ на главной
 
-    SIGN_IN_BUTTON_ON_REGISTRATION_PAGE = By.XPATH, '//*[@id="root"]/div/main/div/div/p/a' # кнопка Войти в окне регистрации
+    SIGN_IN_BUTTON_ON_REGISTRATION_PAGE = By.XPATH, './/a[text()="Войти"]'  # кнопка Войти в окне регистрации
 
-    SIGN_IN_BUTTON_ON_FORGOT_PASSWORD_PAGE = By.XPATH, '//*[@id="root"]/div/main/div/div/p/a' # кнопка Войти в окне восстановления пароля
+    SIGN_IN_BUTTON_ON_FORGOT_PASSWORD_PAGE = \
+        By.XPATH, './/a[text()="Войти"]'  # кнопка Войти в окне восстановления пароля
 
-    SAVE_BUTTON_ON_PROFILE_PAGE = By.XPATH, '//*[@id="root"]/div/main/div/div/div/div/button[2]' # кнопка Сохранить в профиле
+    SAVE_BUTTON_ON_PROFILE_PAGE = By.XPATH, './/button[text()="Сохранить"]'  # кнопка Сохранить в профиле
 
-    LOGOUT_BUTTON = By.XPATH, '//*[@id="root"]/div/main/div/nav/ul/li[3]/button' # кнопка Выйти в профиле
+    LOGOUT_BUTTON = By.XPATH, './/button[text()="Выход"]'  # кнопка Выход в профиле
 
-    HEADER_ON_LOGIN_PAGE = By.XPATH, '//*[@id="root"]/div/main/div/h2[text()="Вход"]' # хедер "Вход" в окне логина
+    HEADER_ON_LOGIN_PAGE = By.XPATH, './/h2[text()="Вход"]'  # хедер "Вход" в окне логина
 
-    CONSTRUCTOR_BUTTON = By.XPATH, '//*[@id="root"]/div/header/nav/ul/li[1]/a' # кнопка "Конструктор"
+    CONSTRUCTOR_BUTTON = By.XPATH, './/p[text()="Конструктор"]'  # кнопка "Конструктор"
 
-    BURGER_BUTTON = By.XPATH, '//*[@id="root"]/div/header/nav/div' # кнопка бургер
+    BURGER_BUTTON = By.XPATH, './/div[@class="AppHeader_header__logo__2D0X2"]'  # кнопка бургер
 
-    CONSTRUCTOR_SAUCES_TAB = By.XPATH, '//*[@id="root"]/div/main/section[1]/div[1]/div[2]/span' # вкладка Соусы
+    CONSTRUCTOR_SAUCES_TAB = By.XPATH, './/span[text()="Соусы"]'  # вкладка Соусы
 
-    CONSTRUCTOR_SAUCES_SECTION = By.XPATH, '//*[@id="root"]/div/main/section[1]/div[2]/h2[2]' # раздел Соусы
+    CONSTRUCTOR_SAUCES_SECTION = By.XPATH, './/h2[text()="Соусы"]'  # раздел Соусы
 
-    CONSTRUCTOR_STUFFING_TAB = By.XPATH, '//*[@id="root"]/div/main/section[1]/div[1]/div[3]/span' # вкладка Начинки
+    CONSTRUCTOR_STUFFING_TAB = By.XPATH, './/span[text()="Начинки"]'  # вкладка Начинки
 
-    CONSTRUCTOR_STUFFING_SECTION = By.XPATH, '//*[@id="root"]/div/main/section[1]/div[2]/h2[3]' # раздел Начинки
+    CONSTRUCTOR_STUFFING_SECTION = By.XPATH, './/h2[text()="Начинки"]'  # раздел Начинки
 
-    CONSTRUCTOR_BUNS_TAB = By.XPATH, '//*[@id="root"]/div/main/section[1]/div[1]/div[1]/span' # вкладка Булки
+    CONSTRUCTOR_BUNS_TAB = By.XPATH, './/span[text()="Булки"]'  # вкладка Булки
 
-    CONSTRUCTOR_BUNS_SECTION = By.XPATH, '//*[@id="root"]/div/main/section[1]/div[2]/h2[1]' # раздел Булки
+    CONSTRUCTOR_BUNS_SECTION = By.XPATH, './/h2[text()="Булки"]'  # раздел Булки
