@@ -1,31 +1,31 @@
 import pytest
-import random
 from selenium.webdriver import Chrome
+from my_test_data import MyTestData
 
 
 @pytest.fixture()
 def test_email():
-    return 'test9999@yandex.ru'
+    return MyTestData.test_email
 
 
 @pytest.fixture()
 def generate_email():
-    return 'maxim_karlo' + str(random.randint(1000, 9999)) + '@yandex.ru'
+    return MyTestData.generate_email()
 
 
 @pytest.fixture()
 def valid_password():
-    return '123123'
+    return MyTestData.valid_password
 
 
 @pytest.fixture()
 def invalid_password():
-    return '123'
+    return MyTestData.invalid_password
 
 
 @pytest.fixture()
 def name():
-    return 'Maxim'
+    return MyTestData.name
 
 
 @pytest.fixture()
